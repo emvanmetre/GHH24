@@ -1,117 +1,135 @@
 {
-    "gala apple": {
-      "category": "produce",
-      "refrigerated": ["7", "weeks"],
-      "unrefrigerated": ["1.5", "weeks"],
-      "frozen": ["7.5", "months"]
-    },
-    "totinos pizza roll": {
-      "category": "frozen",
-      "refrigerated": null,
-      "unrefrigerated": null,
-      "frozen": ["18", "months"]
-    },
-    "dried chickpeas": {
-      "category": "legumes",
-      "refrigerated": null,
-      "unrefrigerated": "inf",
-      "frozen": null
-    },
-    "canned chickpeas": {
-      "category": "canned foods",
-      "refrigerated": null,
-      "unrefrigerated": "inf",
-      "frozen": null
-    },
-    "canned soup": {
-      "category": "canned foods",
-      "refrigerated": null,
-      "unrefrigerated": ["15", "months"],
-      "frozen": null
-    },
-    "raw chicken thighs": {
-      "category": "poultry",
-      "refrigerated": ["2", "days"],
-      "unrefrigerated": null,
-      "frozen": ["1", "year"]
-    },
-    "goat leg": {
-      "category": "meat",
-      "refrigerated": "inf",
-      "unrefrigerated": null,
-      "frozen": ["1", "year"]
-    },
-    "blue crab(fresh meat)": {
-      "category": "seafood",
-      "refrigerated": ["4", "days"],
-      "unrefrigerated": null,
-      "frozen": ["7.5", "months"]
-    },
-    "porterhouse steak": {
-      "category": "meat",
-      "refrigerated": ["1", "week"],
-      "unrefrigerated": null,
-      "frozen": ["12", "months"]
-    },
-    "salmon": {
-      "category": "seafood",
-      "refrigerated": ["1.5", "days"],
-      "unrefrigerated": null,
-      "frozen": ["3", "months"]
-    },
-    "celery": {
-      "category": "produce",
-      "refrigerated": ["4", "weeks"],
-      "unrefrigerated": null,
-      "frozen": ["1", "year"]
-    },
-    "baguette": {
-      "category": "bakery",
-      "refrigerated": ["3", "days"],
-      "unrefrigerated": null,
-      "frozen": ["2", "months"]
-    },
-    "chocolate chip cookies": {
-      "category": "bakery",
-      "refrigerated": ["2", "months"],
-      "unrefrigerated": ["3", "weeks"],
-      "frozen": ["12", "months"]
-    },
-    "mushrooms": {
-      "category": "produce",
-      "refrigerated": ["5.5", "days"],
-      "unrefrigerated": null,
-      "frozen": ["12", "months"]
-    },
-    "cucumbers": {
-      "category": "produce",
-      "refrigerated": ["2", "weeks"],
-      "unrefrigerated": ["1", "week"],
-      "frozen": ["9", "months"]
-    },
-    "bread loaf": {
-      "category": "bakery",
-      "refrigerated": ["10.5", "days"],
-      "unrefrigerated": ["3", "days"],
-      "frozen": ["3", "months"]
-    },
-    "tomato sauce": {
-      "category": "sauce",
-      "refrigerated": null,
-      "unrefrigerated": ["18", "months"],
-      "frozen": null
-    },
-    "pickles": {
-      "category": "condiments",
-      "refrigerated": null,
-      "unrefrigerated": ["15", "months"],
-      "frozen": null
-    },
-    "mozzarella": {
-      "category": "cheese",
-      "refrigerated": ["1.5", "weeks"],
-      "unrefrigerated": null,
-      "frozen": null
-    }
+  "gala apple": {
+    "category": "produce",
+    "refrigerated": ["7", "weeks"],
+    "unrefrigerated": ["1.5", "weeks"],
+    "frozen": ["7.5", "months"],
+    "image_url": "https://www.photos-public-domain.com/wp-content/uploads/2010/12/gala-apples.jpg"
+  },
+  "totinos pizza roll": {
+    "category": "frozen",
+    "refrigerated": null,
+    "unrefrigerated": null,
+    "frozen": ["18", "months"],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Totino%27s_Pizza_Rolls%2C_May_2019.jpg"
+  },
+  "dried chickpeas": {
+    "category": "legumes",
+    "refrigerated": null,
+    "unrefrigerated": "inf",
+    "frozen": null,
+    "image_url": "https://thumbs.dreamstime.com/b/organic-dried-chickpea-texture-background-food-ingredient-327527203.jpg"
+  },
+  "canned chickpeas": {
+    "category": "canned foods",
+    "refrigerated": null,
+    "unrefrigerated": "inf",
+    "frozen": null,
+    "image_url": "https://media.gettyimages.com/id/168307270/photo/canned-garbanzo-beans.jpg?s=612x612&w=gi&k=20&c=rTYnk0rqhk7CVpcv-Tbl5CXqlMHkBg4f0tQnwaoq98o="
+  },
+  "canned soup": {
+    "category": "canned foods",
+    "refrigerated": null,
+    "unrefrigerated": ["15", "months"],
+    "frozen": null,
+    "image_url": "https://thumbs.dreamstime.com/b/tin-can-campbell%C3%A2%E2%82%AC%E2%84%A2s-brand-tomato-soup-condensed-white-background-140438596.jpg"
+  },
+  "raw chicken thighs": {
+    "category": "poultry",
+    "refrigerated": ["2", "days"],
+    "unrefrigerated": null,
+    "frozen": ["1", "year"],
+    "image_url": "https://thumbs.dreamstime.com/b/raw-chicken-thigh-isolated-raw-chicken-thigh-isolated-white-background-173223608.jpg"
+  },
+  "goat leg": {
+    "category": "meat",
+    "refrigerated": "inf",
+    "unrefrigerated": null,
+    "frozen": ["1", "year"],
+    "image_url": "https://thumbs.dreamstime.com/b/raw-goat-leg-meat-bone-isolated-white-background-raw-goat-leg-meat-bone-isolated-white-background-272372992.jpg"
+  },
+  "blue crab(fresh meat)": {
+    "category": "seafood",
+    "refrigerated": ["4", "days"],
+    "unrefrigerated": null,
+    "frozen": ["7.5", "months"],
+    "image_url": "https://thumbs.dreamstime.com/b/steamed-crab-meat-blue-crab-steamed-crab-meat-blue-crab-125793729.jpg"
+  },
+  "porterhouse steak": {
+    "category": "meat",
+    "refrigerated": ["1", "week"],
+    "unrefrigerated": null,
+    "frozen": ["12", "months"],
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Porterhouse_steaks_grilling_barbecue_grills_meat.jpg/1200px-Porterhouse_steaks_grilling_barbecue_grills_meat.jpg"
+  },
+  "salmon": {
+    "category": "seafood",
+    "refrigerated": ["1.5", "days"],
+    "unrefrigerated": null,
+    "frozen": ["3", "months"],
+    "image_url": "https://as2.ftcdn.net/jpg/02/12/37/63/220_F_212376358_hEeAulufAEmVFmTFTQKAuFPH4xKolOUI.jpg"
+  },
+  "celery": {
+    "category": "produce",
+    "refrigerated": ["4", "weeks"],
+    "unrefrigerated": null,
+    "frozen": ["1", "year"],
+    "image_url": "https://as2.ftcdn.net/jpg/02/36/45/59/220_F_236455975_fCHO1TepyjGZsDg6mDdZkstPxBAD2PyY.jpg"
+  },
+  "baguette": {
+    "category": "bakery",
+    "refrigerated": ["3", "days"],
+    "unrefrigerated": null,
+    "frozen": ["2", "months"],
+    "image_url": "https://www.publicdomainpictures.net/pictures/210000/nahled/baguette-de-pain-.jpg"
+  },
+  "chocolate chip cookies": {
+    "category": "bakery",
+    "refrigerated": ["2", "months"],
+    "unrefrigerated": ["3", "weeks"],
+    "frozen": ["12", "months"],
+    "image_url": "https://www.photos-public-domain.com/wp-content/uploads/2017/12/chocolate-chip-cookies.jpg"
+  },
+  "mushrooms": {
+    "category": "produce",
+    "refrigerated": ["5.5", "days"],
+    "unrefrigerated": null,
+    "frozen": ["12", "months"],
+    "image_url": "https://thumbs.dreamstime.com/b/brown-cremini-mushroom-vector-icon-set-d-isolated-white-84245562.jpg"
+  },
+  "cucumbers": {
+    "category": "produce",
+    "refrigerated": ["2", "weeks"],
+    "unrefrigerated": ["1", "week"],
+    "frozen": ["9", "months"],
+    "image_url": "https://thumbs.dreamstime.com/b/cucumber-white-8624699.jpg"
+  },
+  "bread loaf": {
+    "category": "bakery",
+    "refrigerated": ["10.5", "days"],
+    "unrefrigerated": ["3", "days"],
+    "frozen": ["3", "months"],
+    "image_url": "https://lh3.googleusercontent.com/proxy/8NcJZME8zNDtXc15w1O2TcbsTQqZMQHb9rEZMuQB9np2ct9roLdJbgXo5w2vlJm1C-gKZ54qJ5l-mlGZ5ikSTZVzoKb5t8xW5AYzuaQc3YyOJg"
+  },
+  "tomato sauce": {
+    "category": "sauce",
+    "refrigerated": null,
+    "unrefrigerated": ["18", "months"],
+    "frozen": null,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/5/52/Fresh_Tomato_Sauce_%28Unsplash%29.jpg"
+  },
+  "pickles": {
+    "category": "condiments",
+    "refrigerated": null,
+    "unrefrigerated": ["15", "months"],
+    "frozen": null,
+    "image_url": "https://www.publicdomainpictures.net/pictures/300000/nahled/three-jars-of-home-made-pickles.jpg"
+  },
+  "mozzarella": {
+    "category": "cheese",
+    "refrigerated": ["1.5", "weeks"],
+    "unrefrigerated": null,
+    "frozen": null,
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Mozzarella_cheese_%281%29.jpg/1200px-Mozzarella_cheese_%281%29.jpg"
   }
-  
+}
