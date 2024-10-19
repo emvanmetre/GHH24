@@ -1,16 +1,27 @@
 import React, { useState } from "react";
 import { AutoComplete, AutoCompleteProps } from "antd";
 
+const foodOptions = [
+    { value: "Apple" },
+    { value: "Banana" },
+    { value: "Cherry" },
+    { value: "Date" },
+    { value: "Eggplant" },
+    { value: "Fig" },
+    { value: "Grape" },
+    { value: "Honeydew" },
+];
+
 interface AutoCompleteButtonProps
     extends Omit<AutoCompleteProps, 'options'> {
     options: { value: string }[];
 }
 
-const AutoCompleteComponent: React.FC<AutoCompleteButtonProps> = ({ options, ...props }) => {
+const AutoCompleteComponent: React.FC<AutoCompleteButtonProps> = ({ options = foodOptions, ...props }) => {
     const [filteredOptions, setFilteredOptions] = useState<{ value: string }[]>(options);
 
     const handleSearch = (searchText: string) => {
-        const newOptions = options.filter(option => option.value.includes(searchText));
+        const newOptions = options.filter(option => option.value.toLowerCase().includes(searchText.toLowerCase())); // Case-insensitive search
         setFilteredOptions(newOptions);
     };
 
@@ -30,4 +41,4 @@ const AutoCompleteComponent: React.FC<AutoCompleteButtonProps> = ({ options, ...
     );
 };
 
-export default AutoCompleteComponent;
+export default AutoComplete;
