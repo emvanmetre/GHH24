@@ -2,9 +2,14 @@ import logo from './logo.svg';
 import './App.css';
 import expDates from './expDates.json';
 import {add} from 'date-fns';
+import {useState} from 'react';
 
 function App() {
+  const [dates, setDates] = useState({});
   function addDuration(durationArray) {
+    if (!Array.isArray(durationArray) || durationArray.length !== 2) {
+      throw new Error('Invalid duration array');
+    }
     const [amount, unit] = durationArray;
     const duration = { [unit]: parseInt(amount, 10) };
     return add(new Date(), duration);
@@ -29,6 +34,7 @@ function App() {
     }
 
     return {
+      name: foodName.toLowerCase().trim(),
       category: foodData.category,
       refrigerated: foodData.refrigerated,
       frozen: foodData.frozen,
@@ -52,7 +58,8 @@ function App() {
         >
           Learn React
         </a>
-        <input type="text" id="foodName" placeholder="Enter food name" onChange={(e) => console.log(findExpireDates(e.target.value))} />
+        <input type="text" id="foodName" placeholder="Enter food name" onChange={(e) => setDates(findExpireDates(e.target.value))} />
+        <p>{JSON.stringify(dates || {})}</p>
       </header>
     </div>
   );

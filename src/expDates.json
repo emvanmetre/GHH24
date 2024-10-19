@@ -1,7 +1,7 @@
 {
     "gala apple": {
       "category": "produce",
-      "refrigerated": ["6-8", "weeks"],
+      "refrigerated": ["7", "weeks"],
       "unrefrigerated": ["1.5", "weeks"],
       "frozen": ["7.5", "months"]
     },
