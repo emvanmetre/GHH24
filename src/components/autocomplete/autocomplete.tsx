@@ -25,7 +25,7 @@ const AutoCompleteComponent: React.FC<AutoCompleteButtonProps> = ({ options, ...
             onSelect={handleSelect}
             placeholder="Add a food..."
             style={{ width: 200 }}
-            {...props} com
+            {...props} 
         />
     );
 };
