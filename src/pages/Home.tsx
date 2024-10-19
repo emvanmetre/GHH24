@@ -7,12 +7,25 @@ function Home() {
     return { value: name };
   });
 
+  const [savedFoods, setSavedFoods] = React.useState<string[]>([]);
+  const handleSelect = (value: string) => {
+    setSavedFoods([...savedFoods, value]);
+  }
+
     return (
-      <div className="Homepage">
+      <main className="Homepage">
         <Navbar></Navbar>
-        <AutoCompleteComponent options={autocompleteValues}></AutoCompleteComponent>
+        <br></br>
+        <h1>shelfsaver</h1>
+        <AutoCompleteComponent options={autocompleteValues} handleSelect={handleSelect}></AutoCompleteComponent>
+        <h1>Saved Foods</h1>
+        <ul>
+          {savedFoods.map((food) => (
+            <li key={food}>{food}</li>
+          ))}
+        </ul>
         <ButtonIcon icon="checkmark">Hello there!</ButtonIcon>
-      </div>
+      </main>
     );
   }
 
