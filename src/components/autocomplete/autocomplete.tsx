@@ -1,23 +1,13 @@
 import React, { useState } from "react";
 import { AutoComplete, AutoCompleteProps } from "antd";
 
-const foodOptions = [
-    { value: "Apple" },
-    { value: "Banana" },
-    { value: "Cherry" },
-    { value: "Date" },
-    { value: "Eggplant" },
-    { value: "Fig" },
-    { value: "Grape" },
-    { value: "Honeydew" },
-];
 
 interface AutoCompleteButtonProps
     extends Omit<AutoCompleteProps, 'options'> {
     options: { value: string }[];
 }
 
-const AutoCompleteComponent: React.FC<AutoCompleteButtonProps> = ({ options = foodOptions, ...props }) => {
+const AutoCompleteComponent: React.FC<AutoCompleteButtonProps> = ({ options, ...props }) => {
     const [filteredOptions, setFilteredOptions] = useState<{ value: string }[]>(options);
 
     const handleSearch = (searchText: string) => {
@@ -41,4 +31,4 @@ const AutoCompleteComponent: React.FC<AutoCompleteButtonProps> = ({ options = fo
     );
 };
 
-export default AutoComplete;
+export default AutoCompleteComponent;
