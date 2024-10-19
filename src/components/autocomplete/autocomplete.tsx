@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { AutoComplete, AutoCompleteProps } from "antd";
-
+import styles from "./autocomplete.module.css";
 
 interface AutoCompleteButtonProps
     extends Omit<AutoCompleteProps, 'options'> {
@@ -17,7 +17,9 @@ const AutoCompleteComponent: React.FC<AutoCompleteButtonProps> = ({ options, han
     };
 
     return (
+        <div className={styles.autoCompleteContainer}>
         <AutoComplete
+            className={styles.autoCompleteInput}
             options={filteredOptions}
             onSearch={handleSearch}
             onSelect={handleSelect}
@@ -25,6 +27,7 @@ const AutoCompleteComponent: React.FC<AutoCompleteButtonProps> = ({ options, han
             style={{ width: 200 }}
             {...props} 
         />
+        </div>
     );
 };
 
