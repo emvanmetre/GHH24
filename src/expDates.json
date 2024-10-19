@@ -1,0 +1,117 @@
+{
+    "gala apple": {
+      "category": "produce",
+      "refrigerated": ["6-8", "weeks"],
+      "unrefrigerated": ["1.5", "weeks"],
+      "frozen": ["7.5", "months"]
+    },
+    "totinos pizza roll": {
+      "category": "frozen",
+      "refrigerated": null,
+      "unrefrigerated": null,
+      "frozen": ["18", "months"]
+    },
+    "dried chickpeas": {
+      "category": "legumes",
+      "refrigerated": null,
+      "unrefrigerated": "inf",
+      "frozen": null
+    },
+    "canned chickpeas": {
+      "category": "canned foods",
+      "refrigerated": null,
+      "unrefrigerated": "inf",
+      "frozen": null
+    },
+    "canned soup": {
+      "category": "canned foods",
+      "refrigerated": null,
+      "unrefrigerated": ["15", "months"],
+      "frozen": null
+    },
+    "raw chicken thighs": {
+      "category": "poultry",
+      "refrigerated": ["2", "days"],
+      "unrefrigerated": null,
+      "frozen": ["1", "year"]
+    },
+    "goat leg": {
+      "category": "meat",
+      "refrigerated": "inf",
+      "unrefrigerated": null,
+      "frozen": ["1", "year"]
+    },
+    "blue crab(fresh meat)": {
+      "category": "seafood",
+      "refrigerated": ["4", "days"],
+      "unrefrigerated": null,
+      "frozen": ["7.5", "months"]
+    },
+    "porterhouse steak": {
+      "category": "meat",
+      "refrigerated": ["1", "week"],
+      "unrefrigerated": null,
+      "frozen": ["12", "months"]
+    },
+    "salmon": {
+      "category": "seafood",
+      "refrigerated": ["1.5", "days"],
+      "unrefrigerated": null,
+      "frozen": ["3", "months"]
+    },
+    "celery": {
+      "category": "produce",
+      "refrigerated": ["4", "weeks"],
+      "unrefrigerated": null,
+      "frozen": ["1", "year"]
+    },
+    "baguette": {
+      "category": "bakery",
+      "refrigerated": ["3", "days"],
+      "unrefrigerated": null,
+      "frozen": ["2", "months"]
+    },
+    "chocolate chip cookies": {
+      "category": "bakery",
+      "refrigerated": ["2", "months"],
+      "unrefrigerated": ["3", "weeks"],
+      "frozen": ["12", "months"]
+    },
+    "mushrooms": {
+      "category": "produce",
+      "refrigerated": ["5.5", "days"],
+      "unrefrigerated": null,
+      "frozen": ["12", "months"]
+    },
+    "cucumbers": {
+      "category": "produce",
+      "refrigerated": ["2", "weeks"],
+      "unrefrigerated": ["1", "week"],
+      "frozen": ["9", "months"]
+    },
+    "bread loaf": {
+      "category": "bakery",
+      "refrigerated": ["10.5", "days"],
+      "unrefrigerated": ["3", "days"],
+      "frozen": ["3", "months"]
+    },
+    "tomato sauce": {
+      "category": "sauce",
+      "refrigerated": null,
+      "unrefrigerated": ["18", "months"],
+      "frozen": null
+    },
+    "pickles": {
+      "category": "condiments",
+      "refrigerated": null,
+      "unrefrigerated": ["15", "months"],
+      "frozen": null
+    },
+    "mozzarella": {
+      "category": "cheese",
+      "refrigerated": ["1.5", "weeks"],
+      "unrefrigerated": null,
+      "frozen": null
+    }
+  }
+  

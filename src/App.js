@@ -1,7 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
+import expDates from './expDates.json';
+import {add} from 'date-fns';
 
 function App() {
+  function addDuration(durationArray) {
+    const [amount, unit] = durationArray;
+    const duration = { [unit]: parseInt(amount, 10) };
+    return add(new Date(), duration);
+  }
+
+  const findExpireDates = (foodName) => {
+    const foodData = expDates[foodName.toLowerCase().trim()];
+    if (!foodData) {
+      return null;
+    }
+
+    if (foodData.refrigerated) {
+      foodData.refrigerated = addDuration(foodData.refrigerated);
+    }
+
+    if (foodData.frozen) {
+      foodData.frozen = addDuration(foodData.frozen);
+    }
+
+    if (foodData.unrefrigerated) {
+      foodData.unrefrigerated = addDuration(foodData.unrefrigerated);
+    }
+
+    return {
+      category: foodData.category,
+      refrigerated: foodData.refrigerated,
+      frozen: foodData.frozen,
+      unrefrigerated: foodData.unrefrigerated,
+    }
+  }
+
+
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +52,7 @@ function App() {
         >
           Learn React
         </a>
+        <input type="text" id="foodName" placeholder="Enter food name" onChange={(e) => console.log(findExpireDates(e.target.value))} />
       </header>
     </div>
   );
