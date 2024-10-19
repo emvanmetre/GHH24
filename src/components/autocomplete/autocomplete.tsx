@@ -23,9 +23,9 @@ const AutoCompleteComponent: React.FC<AutoCompleteButtonProps> = ({ options, ...
             options={filteredOptions}
             onSearch={handleSearch}
             onSelect={handleSelect}
-            placeholder="Type something..."
+            placeholder="Add a food..."
             style={{ width: 200 }}
-            {...props} // props will still apply without suffix
+            {...props} com
         />
     );
 };
