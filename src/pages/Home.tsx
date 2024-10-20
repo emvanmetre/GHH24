@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import { ButtonIcon, Navbar, AutoCompleteComponent } from "../components";
-import { Button, Modal, Space } from 'antd';
+import React, { useEffect } from "react";
+import { ButtonIcon, AutoCompleteComponent } from "../components";
 import findExpireDates from "../lookup"
 import expDates from "../expDates.json";
 import { formatDistanceToNow } from "date-fns";
@@ -12,6 +11,20 @@ function Home() {
   });
 
   const [savedFoods, setSavedFoods] = React.useState<any[]>([]);
+  // Load savedFoods from local storage when the component mounts
+  useEffect(() => {
+    const savedFoodsFromStorage = localStorage.getItem("savedFoods");
+    if (savedFoodsFromStorage) {
+      setSavedFoods(JSON.parse(savedFoodsFromStorage));
+    }
+  }, []);
+
+  // Save savedFoods to local storage whenever it changes
+  useEffect(() => {
+    localStorage.setItem("savedFoods", JSON.stringify(savedFoods));
+    console.log(localStorage.getItem("savedFoods"))
+  }, [savedFoods]);
+
   const handleSelect = (value: string) => {
     if (savedFoods.find((f) => f.name === value)) {
       alert("You have already saved this food.");
@@ -32,7 +45,7 @@ function Home() {
       return;
     }
     let opt: keyof typeof d = (prompt("Where is your food stored? " + validOpts.join(", ")) || "unrefrigerated") as keyof typeof d;
-    opt = opt.toLowerCase().trim() as keyof typeof d; 
+    opt = opt.toLowerCase().trim() as keyof typeof d;
     if (!validOpts.includes(opt)) {
       alert("Invalid option. Please try again.");
       return;
@@ -50,27 +63,27 @@ function Home() {
       <h1>saved foods</h1>
       <p><i>click an item to remove</i></p>
       {/* <ul> */}
-        {savedFoods
-          .slice()
-          .sort((a, b) => {
-            if (a.date === "inf") return 1;
-            if (b.date === "inf") return -1;
-            return new Date(a.date).getTime() - new Date(b.date).getTime();
-          })
-          .map(({ name, date }) => (
-            <div key={name}
+      {savedFoods
+        .slice()
+        .sort((a, b) => {
+          if (a.date === "inf") return 1;
+          if (b.date === "inf") return -1;
+          return new Date(a.date).getTime() - new Date(b.date).getTime();
+        })
+        .map(({ name, date }) => (
+          <div key={name}
             className="food-item"
             onClick={() => {
               // remove the food from the list
               setSavedFoods(savedFoods.filter((f) => f.name !== name));
             }}
-            >
-              <img src={eDates[name].image_url} alt={name} width={100} /><br></br>
-              {name}: 
-              {" "}{
-                date === "inf" ? "♾" : (date < new Date() ? "Expired " :"") + formatDistanceToNow(date, { addSuffix: true })
-              }</div>
-          ))}
+          >
+            <img src={eDates[name].image_url} alt={name} width={100} /><br></br>
+            {name}:
+            {" "}{
+              date === "inf" ? "♾" : (date < new Date() ? "Expired " : "") + formatDistanceToNow(date, { addSuffix: true })
+            }</div>
+        ))}
       {/* </ul> */}
       <ButtonIcon icon="checkmark">Hello there!</ButtonIcon>
     </main>
