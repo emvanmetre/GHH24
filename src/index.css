@@ -20,3 +20,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.food-item {
+  /*drop shadow*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 10px;
+  width: 200px;
+
+  img {
+    border-radius: 4px;
+  }
+}

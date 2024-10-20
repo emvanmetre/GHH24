@@ -47,6 +47,7 @@ function Home() {
       <h1>shelfsmart</h1>
       <AutoCompleteComponent options={autocompleteValues} handleSelect={handleSelect}></AutoCompleteComponent>
       <h1>saved foods</h1>
+      <p><i>click an item to remove</i></p>
       {/* <ul> */}
         {savedFoods
           .slice()
@@ -56,7 +57,13 @@ function Home() {
             return new Date(a.date).getTime() - new Date(b.date).getTime();
           })
           .map(({ name, date }) => (
-            <div key={name}>
+            <div key={name}
+            className="food-item"
+            onClick={() => {
+              // remove the food from the list
+              setSavedFoods(savedFoods.filter((f) => f.name !== name));
+            }}
+            >
               <img src={eDates[name].image_url} alt={name} width={100} /><br></br>
               {name}: 
               {" "}{
