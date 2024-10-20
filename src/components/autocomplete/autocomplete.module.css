@@ -1,0 +1,9 @@
+.autoCompleteInput {
+    width: 20%;
+    border: 2px solid brown;
+    border-radius: 10px;
+}
+
+.autoCompleteOption:hover {
+    background-color: #6f9c33;
+}
