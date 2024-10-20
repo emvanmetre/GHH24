@@ -43,7 +43,7 @@
     },
     "goat leg": {
       "category": "meat",
-      "refrigerated": "inf",
+      "refrigerated": ["4","days"],
       "unrefrigerated": null,
       "frozen": ["1", "year"],
       "image_url": "https://thumbs.dreamstime.com/b/raw-goat-leg-meat-bone-isolated-white-background-raw-goat-leg-meat-bone-isolated-white-background-272372992.jpg"
