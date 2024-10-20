@@ -6,6 +6,7 @@ import expDates from "../expDates.json";
 import { formatDistanceToNow } from "date-fns";
 
 function Home() {
+  const eDates: any = expDates;
   const autocompleteValues = Object.keys(expDates).map((name) => {
     return { value: name };
   });
@@ -32,7 +33,7 @@ function Home() {
     }
     const opt: keyof typeof d = (prompt("Where is your food stored? " + validOpts.join(", ")) || "unrefrigerated") as keyof typeof d;
     if (!validOpts.includes(opt)) {
-      prompt("Invalid option. Please try again.");
+      alert("Invalid option. Please try again.");
       return;
     }
     const date = d[opt];
@@ -46,7 +47,7 @@ function Home() {
       <h1>shelfsmart</h1>
       <AutoCompleteComponent options={autocompleteValues} handleSelect={handleSelect}></AutoCompleteComponent>
       <h1>saved foods</h1>
-      <ul>
+      {/* <ul> */}
         {savedFoods
           .slice()
           .sort((a, b) => {
@@ -55,14 +56,14 @@ function Home() {
             return new Date(a.date).getTime() - new Date(b.date).getTime();
           })
           .map(({ name, date }) => (
-            <li key={name}>
+            <div key={name}>
+              <img src={eDates[name].image_url} alt={name} width={100} /><br></br>
               {name}: 
-              {/* image url: {expDates[name].image_url} */}
-              {
+              {" "}{
                 date === "inf" ? "♾" : (date < new Date() ? "Expired " :"") + formatDistanceToNow(date, { addSuffix: true })
-              }</li>
+              }</div>
           ))}
-      </ul>
+      {/* </ul> */}
       <ButtonIcon icon="checkmark">Hello there!</ButtonIcon>
     </main>
   );
