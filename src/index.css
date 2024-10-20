@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
 body {
-  background-color: rgb(249, 238, 218);
+  background-color: rgb(254, 247, 235);
   color: rgb(57, 5, 66);
   margin: 5px;
   padding: 25px;
   border-style: solid;
-  border-color: rgb(249,238,218);
+  border-color: rgb(254, 247, 235);
   border-width: 12px;
   border-radius: 4px;
   font-family: Oswald, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -27,7 +27,7 @@ code {
   border-radius: 4px;
   padding: 10px;
   width: 200px;
-
+  margin-bottom: 10px;
   img {
     border-radius: 4px;
   }

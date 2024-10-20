@@ -31,7 +31,8 @@ function Home() {
       setSavedFoods([...savedFoods, { name: value, date: d[validOpts[0]] }]);
       return;
     }
-    const opt: keyof typeof d = (prompt("Where is your food stored? " + validOpts.join(", ")) || "unrefrigerated") as keyof typeof d;
+    let opt: keyof typeof d = (prompt("Where is your food stored? " + validOpts.join(", ")) || "unrefrigerated") as keyof typeof d;
+    opt = opt.toLowerCase().trim() as keyof typeof d; 
     if (!validOpts.includes(opt)) {
       alert("Invalid option. Please try again.");
       return;
